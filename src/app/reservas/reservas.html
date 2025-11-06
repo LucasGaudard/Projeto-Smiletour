@@ -1,0 +1,136 @@
+<div class="container">
+  <div class="content">
+    <div class="text-03">
+      <h1>Confira nossas reservas!</h1>
+    </div>
+
+    <div class="col">
+      <img src="Reservas02.jpg" alt="Banner Home" class="img-fluid" />
+
+      <!-- Botão para abrir modal -->
+      <button
+        type="button"
+        class="btn btn-primary mt-3"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal1"
+      >
+        Reservar minha viagem 🌍✈️
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal1"
+        tabindex="-1"
+        aria-labelledby="reservaLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content shadow-lg rounded-4 border-0">
+            
+            <!-- Cabeçalho -->
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title fw-bold" id="reservaLabel">
+                Reserve sua próxima aventura ✨
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Fechar"
+              ></button>
+            </div>
+
+            <!-- Corpo -->
+            <div class="modal-body p-4">
+              <p class="mb-3">
+                Preencha os dados abaixo e garanta sua reserva com a
+                <strong>SmileTour</strong>.
+                O mundo espera por você com um sorriso! 😃
+              </p>
+
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Destino</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Ex: Paris, Roma, Maldivas"
+                    />
+                  </div>
+
+                  <div class="col-md-3">
+                    <label class="form-label">Check-in</label>
+                    <input type="date" class="form-control" />
+                  </div>
+
+                  <div class="col-md-3">
+                    <label class="form-label">Check-out</label>
+                    <input type="date" class="form-control" />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Nome completo</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Digite seu nome"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">E-mail</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="exemplo@email.com"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Número de pessoas</label>
+                    <select class="form-select">
+                      <option selected>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4+</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Telefone</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="telefone"
+                      name="telefone"
+                      placeholder="(99) 99999-9999"
+                      [(ngModel)]="telefone"
+                        mask="(00) 00000-0000"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Rodapé -->
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cancelar
+              </button>
+              <button type="button" class="btn btn-success">
+                Confirmar reserva ✅
+              </button>
+              <button type="reset" class="btn btn-danger">LIMPAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

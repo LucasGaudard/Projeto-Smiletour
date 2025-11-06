@@ -1,0 +1,55 @@
+<div class="container">
+<div class="content">
+  
+      <div class="content my-5">
+        <h1 class="text-1 text-center">Fale Conosco</h1>
+        <p class="text-2 text-center">Tem dúvidas ou deseja informações sobre nossos passeios? Envie sua mensagem abaixo
+          que entraremos em contato!</p>
+
+        <form class="row g-3 justify-content-center" (ngSubmit)="confirmaFale()" #faleForm="ngForm">
+         
+              <div class="col-md-5">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome completo"  [(ngModel)]="nome" required>
+              </div>
+
+              <div class="col-md-5">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="text" class="form-control" id="telefone"  name="telefone" placeholder="(99) 99999-9999" mask="(00) 00000-0000" [(ngModel)]="telefone"  maxlength="15" required>
+              </div> 
+
+              <div class="col-md-4">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="email@exemplo.com" [(ngModel)]="email"required>
+              </div>
+
+              <div class="col-md-4">
+                <label for="assunto" class="form-label">Assunto</label>
+                <input type="text" name="assunto" class="form-control" id="assunto" placeholder="Assunto da mensagem" [(ngModel)]="assunto" required>
+              </div>
+
+              <div class="col-lg-6">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" name="mensagem" id="mensagem" rows="5" placeholder="Escreva sua mensagem aqui" [(ngModel)]="mensagem" required></textarea>
+              </div>
+
+              <div class="col-12 text-center">
+                <button type="submit" class="button-L"  [disabled]="!faleForm.valid">Enviar Mensagem</button>
+                <button type="reset" class="button-clear button-L" (click)="limparCampos()">LIMPAR</button>
+
+
+              </div>
+        </form>
+      </div>
+
+    </div> <!-- fim content -->
+    </div>
+
+
+
+
+
+
+
+
+  
